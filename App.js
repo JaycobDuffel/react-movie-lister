@@ -13,6 +13,16 @@ export default function App() {
     }
   };
 
+  useEffect(() => {
+    getMovies(titleFilter);
+  }, [titleFilter])
+
+  useEffect(() => {
+    if (titleFilter.length < 3) {
+      setMovies({});
+    }
+  }, [titleFilter])
+
   return (
     <SafeAreaView style={styles.container}>
       <FilterContext.Provider value={{ titleFilter, setTitleFilter }}>
