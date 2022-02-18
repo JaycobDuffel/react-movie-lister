@@ -7,7 +7,7 @@ export default function SearchNoResults() {
     <View style={styles.container}>
       <Text style={[styles.text, styles.title]}>Oops!</Text>
       <Text style={styles.text}>Looks like we didn't find any results for your search.</Text>
-      <Text style={styles.text}>Please edit your search and try again!</Text>
+      <Text style={styles.text}>Please edit your search to keep trying!</Text>
     </View>
   );
 }
