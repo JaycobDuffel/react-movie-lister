@@ -4,6 +4,15 @@ import { FilterContext, MovieContext } from './src/context/Context';
 export default function App() {
   const [titleFilter, setTitleFilter] = useState('');
   const [movies, setMovies] = useState({});
+
+  const getMovies = async (search) => {
+    const response = await fetch(`http://www.omdbapi.com/?s=${search}&type=movie&apikey=e8c6ff63`)
+    const data = await response.json();
+    if (data.Search) {
+      setMovies(data.Search);
+    }
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <FilterContext.Provider value={{ titleFilter, setTitleFilter }}>
