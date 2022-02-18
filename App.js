@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { FilterContext, MovieContext } from './src/context/Context';
 
 export default function App() {
+  const [titleFilter, setTitleFilter] = useState('');
+  const [movies, setMovies] = useState({});
   return (
     <SafeAreaView style={styles.container}>
       <FilterContext.Provider value={{ titleFilter, setTitleFilter }}>
