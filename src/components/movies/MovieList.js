@@ -20,3 +20,15 @@ export default function MovieList() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    position: 'relative',
+    top: Constants.statusBarHeight + 30,
+  },
+  flatList: {
+    alignItems: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+  },
+});
