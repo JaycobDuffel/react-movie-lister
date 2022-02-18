@@ -40,6 +40,7 @@ export default function App() {
   useEffect(() => {
     if (titleFilter.length < 3) {
       setMovies({});
+      setNoMovies(false);
     }
   }, [titleFilter])
 
