@@ -31,7 +31,10 @@ export default function App() {
   };
 
   useEffect(() => {
-    getMovies(titleFilter);
+    // Don't call API if the search input has > 3 characters as OMDb API will return an error "Too many results"
+    if (titleFilter.length > 2) {
+      getMovies(titleFilter);
+    }
   }, [titleFilter])
 
   useEffect(() => {
