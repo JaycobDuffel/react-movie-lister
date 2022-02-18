@@ -1,4 +1,7 @@
+import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, SafeAreaView } from 'react-native';
+
 import { FilterContext, MovieContext } from './src/context/Context';
 
 export default function App() {
