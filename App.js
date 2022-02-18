@@ -2,7 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, SafeAreaView } from 'react-native';
 
+import { isObjectEmpty } from './src/helpers/isObjectEmpty';
 import { FilterContext, MovieContext } from './src/context/Context';
+import SearchBar from './src/components/search/SearchBar';
+import SearchEmpty from './src/components/search/SearchEmpty';
+import SearchNoResults from './src/components/search/SearchNoResults';
+import MovieList from './src/components/movies/MovieList';
+import { mainBackgroundColor } from './src/constants/colors';
+
 
 export default function App() {
   const [titleFilter, setTitleFilter] = useState('');
