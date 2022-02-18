@@ -7,14 +7,14 @@ export default function SearchNoResults() {
     <View style={styles.container}>
       <Text style={[styles.text, styles.title]}>Oops!</Text>
       <Text style={styles.text}>Looks like we didn't find any results for your search.</Text>
-      <Text style={styles.text}>Click below to clear and try again!</Text>
+      <Text style={styles.text}>Please edit your search and try again!</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: '600',
   },
   button: {
@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 10,
     width: '90%'
   },
   text: {
