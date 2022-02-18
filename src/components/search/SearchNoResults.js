@@ -17,10 +17,6 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: '600',
   },
-  button: {
-    marginVertical: 15,
-    width: '60%'
-  },
   container: {
     backgroundColor: cardBackgroundColor,
     borderRadius: 25,
