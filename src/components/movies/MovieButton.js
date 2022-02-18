@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+
 import { cardButtonBackgroundColor } from '../../constants/colors';
 
 export default function MovieButton({ title, style, onPress }) {
