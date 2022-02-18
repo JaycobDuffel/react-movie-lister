@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, SafeAreaView } from 'react-native';
 
-import { isObjectEmpty } from './src/helpers/isObjectEmpty';
 import { FilterContext, MovieContext } from './src/context/Context';
 import SearchBar from './src/components/search/SearchBar';
 import SearchEmpty from './src/components/search/SearchEmpty';
@@ -49,7 +48,7 @@ export default function App() {
       <FilterContext.Provider value={{ titleFilter, setTitleFilter }}>
         <SearchBar />
         <MovieContext.Provider value={{ movies, setMovies }} style={styles.movieList}>
-          {titleFilter.length < 3 ? <SearchEmpty /> : !isObjectEmpty(movies) ? <MovieList /> : <SearchNoResults />}
+          {titleFilter.length < 3 ? <SearchEmpty /> : noMovies ? <SearchNoResults /> : <MovieList />}
         </MovieContext.Provider>
         <StatusBar style="auto" />
       </FilterContext.Provider>
