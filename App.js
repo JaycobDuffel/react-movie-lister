@@ -19,8 +19,14 @@ export default function App() {
   const getMovies = async (search) => {
     const response = await fetch(`http://www.omdbapi.com/?s=${search}&type=movie&apikey=e8c6ff63`)
     const data = await response.json();
+
+    if (data.Response === "False") {
+      setMovies({});
+      setNoMovies(true);
+    }
     if (data.Search) {
       setMovies(data.Search);
+      setNoMovies(false);
     }
   };
 
