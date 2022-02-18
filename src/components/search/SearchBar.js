@@ -21,3 +21,17 @@ export default SearchBar = forwardRef((props, ref) => {
     ></TextInput>
   )
 });
+
+const styles = StyleSheet.create({
+  searchBar: {
+    backgroundColor: searchBarBackgroundColor,
+    borderRadius: 25,
+    color: searchBarTextColor,
+    height: 50,
+    padding: 10,
+    paddingHorizontal: 20,
+    position: 'absolute',
+    top: Constants.statusBarHeight + 15,
+    width: '90%',
+  },
+})
