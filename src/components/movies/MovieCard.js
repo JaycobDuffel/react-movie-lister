@@ -22,3 +22,28 @@ export default function MovieCard({ movie }) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    backgroundColor: cardBackgroundColor,
+    borderRadius: 25,
+    display: 'flex',
+    flexDirection: 'row',
+    height: 300,
+    justifyContent: 'space-evenly',
+    marginVertical: 15,
+    width: '95%'
+  },
+  movieDetails: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    width: '33%',
+    height: '100%',
+  },
+  poster: {
+    width: 187,
+    height: 275,
+  },
+});
